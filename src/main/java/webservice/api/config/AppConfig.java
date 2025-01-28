@@ -21,7 +21,7 @@ import java.util.Properties;
 @Configuration
 @EnableTransactionManagement
 @PropertySource("classpath:db.properties")
-@ComponentScan(value = "webservice.api.data")
+@ComponentScan(value = "webservice.api")
 public class AppConfig {
 
     private final Environment env;

@@ -1,11 +1,10 @@
-package webservice.api.data.service;
+package webservice.api.dao;
 
-import webservice.api.data.models.User;
+import webservice.api.model.User;
 
 import java.util.List;
 
-public interface UserService {
-
+public interface UserDao {
     void addUser(User user);
 
     void updateUser(User user);
@@ -15,5 +14,4 @@ public interface UserService {
     User getUserById(Long id);
 
     List<User> getAllUsers();
-
 }

@@ -10,8 +10,17 @@
     <tr th:each="user : ${users}">
         <td th:text="${user.getFirstName() + '   ' + user.getLastName()}">User</td>
         <td th:text="${user.getEmail()}">Email</td>
-        <td><a th:href="${'/user-service/update?id=' + user.getId()}">Update</a></td>
-        <td><a th:href="${'/user-service/delete?id=' + user.getId()}">Delete</a></td>
+        <td>
+            <form method="get" action="/user-service/update">
+                <input type="hidden" id="id" name="id" th:value="${user.getId()}">
+                <input type="submit" value="Update">
+            </form>
+        </td>
+        <td>
+            <form method="post" th:action="${'/user-service/delete?id=' + user.getId()}">
+                <input type="submit" value="Delete">
+            </form>
+        </td>
     </tr>
 </table>
 <h5>Добавить нового User <a href="/user-service/new">>>></a></h5>

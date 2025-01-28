@@ -1,10 +1,10 @@
-package webservice.api.data.service;
+package webservice.api.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import webservice.api.data.dao.UserDao;
-import webservice.api.data.models.User;
+import webservice.api.dao.UserDao;
+import webservice.api.model.User;
 
 import java.util.List;
 

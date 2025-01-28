@@ -1,4 +1,4 @@
-package webservice.api.data.models;
+package webservice.api.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;

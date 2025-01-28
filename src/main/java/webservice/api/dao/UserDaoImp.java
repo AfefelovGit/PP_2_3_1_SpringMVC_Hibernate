@@ -1,10 +1,10 @@
-package webservice.api.data.dao;
+package webservice.api.dao;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.TypedQuery;
 import org.springframework.stereotype.Repository;
-import webservice.api.data.models.User;
+import webservice.api.model.User;
 
 import java.util.List;
 
@@ -12,7 +12,7 @@ import java.util.List;
 public class UserDaoImp implements UserDao {
 
     @PersistenceContext
-    EntityManager em;
+    private EntityManager em;
 
     @Override
     public void addUser(User user) {
